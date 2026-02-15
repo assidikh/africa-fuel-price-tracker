@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Africa Fuel Price Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>⛽ Africa Fuel Price Tracker</h1>
+    <p class="subtitle">
+      Comparer le prix du carburant dans les pays africains
+    </p>
+
+    <!-- FORMULAIRE -->
+    <form id="fuel-form">
+      <div class="field">
+        <label for="country">Pays</label>
+        <select id="country">
+          <option value="">-- Sélectionner un pays --</option>
+          <option value="NGA">Nigeria</option>
+          <option value="SEN">Sénégal</option>
+          <option value="CIV">Côte d’Ivoire</option>
+          <option value="CMR">Cameroun</option>
+          <option value="KEN">Kenya</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="year">Année</label>
+        <select id="year">
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+      </div>
+
+      <button type="submit">Afficher le prix</button>
+    </form>
+
+    <!-- RESULTAT -->
+    <section id="result" class="hidden">
+      <h2>Résultat</h2>
+      <p id="price-text"></p>
+      <p class="source">
+        Source : données ouvertes de la 
+        <strong>:contentReference[oaicite:0]{index=0}</strong>
+      </p>
+    </section>
+
+    <!-- ERREUR -->
+    <p id="error" class="error hidden"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
